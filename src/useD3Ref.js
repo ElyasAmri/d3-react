@@ -1,10 +1,7 @@
 import {useEffect, useRef} from 'react'
 import {select} from 'd3'
-import type {DependencyList} from 'react'
 
-type DOMElement = ElementTagNameMap
-
-const useD3Ref = <K extends keyof DOMElement>(renderFn: (element: DOMElement[K]) => void, deps: DependencyList = []) => {
+const useD3Ref = (renderFn, deps = []) => {
     const ref = useRef(null)
     
     useEffect(() => {
@@ -18,4 +15,4 @@ const useD3Ref = <K extends keyof DOMElement>(renderFn: (element: DOMElement[K])
     return ref
 }
 
-export default useD3Ref
+module.exports = useD3Ref
