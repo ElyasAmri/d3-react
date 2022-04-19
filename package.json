@@ -1,0 +1,7 @@
+{
+    "name": "d3-react-helpers",
+    "peerDependencies": {
+        "d3": "",
+        "react": "^18.0.0"
+    }
+}
